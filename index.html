@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoykaCity | Ваша ідеальна мийка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">Moyka<span>City</span></a>
+            <nav class="nav">
+                <a href="#hero" class="nav__link">Головна</a>
+                <a href="#loyalty" class="nav__link active">Бонуси</a>
+                <a href="#services" class="nav__link">Послуги</a>
+                <a href="#contacts" class="nav__link">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container hero__content">
+            <h1 class="hero__title">Кожну 5-ту мийку — <span class="highlight">салон безкоштовно</span></h1>
+            <p class="hero__subtitle">Преміальний догляд за вашим авто. Система лояльності, яка працює на вас.</p>
+            <a href="#loyalty" class="btn btn--primary">Перевірити мої мийки</a>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+    <section id="loyalty" class="section loyalty">
+        <div class="container">
+            <h2 class="section__title">Ваш особистий кабінет</h2>
+            <p class="section__subtitle">Введіть номер телефону, щоб дізнатись свій прогрес до безкоштовного прибирання салону.</p>
+
+            <div class="loyalty-checker card">
+                <div class="input-group">
+                   <i class="fa-solid fa-phone icon"></i>
+                   <input type="tel" id="phoneInput" placeholder="Ваш номер (напр. 0501234567)">
+                </div>
+                <button id="checkBtn" class="btn btn--accent">Перевірити статус</button>
+                <p id="errorMessage" class="error-text"></p>
+            </div>
+
+            <div id="resultsArea" class="results-area hidden">
+                <h3>Ваш прогрес:</h3>
+                
+                <div class="progress-track">
+                    <div class="progress-step" data-step="1">
+                        <div class="circle"><i class="fa-solid fa-car-side"></i></div>
+                        <span>1 мийка</span>
+                    </div>
+                     <div class="progress-step" data-step="2">
+                        <div class="circle"><i class="fa-solid fa-car-side"></i></div>
+                        <span>2 мийки</span>
+                    </div>
+                     <div class="progress-step" data-step="3">
+                        <div class="circle"><i class="fa-solid fa-car-side"></i></div>
+                        <span>3 мийки</span>
+                    </div>
+                     <div class="progress-step" data-step="4">
+                        <div class="circle"><i class="fa-solid fa-car-side"></i></div>
+                        <span>4 мийки</span>
+                    </div>
+                    <div class="progress-step gift-step" data-step="5">
+                        <div class="circle"><i class="fa-solid fa-gift"></i></div>
+                        <span>САЛОН БЕЗКОШТОВНО!</span>
+                    </div>
+                </div>
+
+                <p class="info-text">Бажаєте зафіксувати нову мийку? Натисніть кнопку нижче, і адміністратор підтвердить ваш візит.</p>
+                <button id="addWashBtn" class="btn btn--outline">📅 Додати нову мийку</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section services--dark">
+        <div class="container">
+             <h2 class="section__title">Наші послуги</h2>
+             <div class="services-grid">
+                 <div class="service-card">
+                     <i class="fa-solid fa-shower service-icon"></i>
+                     <h3>Експрес</h3><p>Швидка зовнішня мийка активною піною, змивання, сушіння.</p>
+                 </div>
+                 <div class="service-card">
+                     <i class="fa-solid fa-gem service-icon"></i>
+                     <h3>Комплекс Преміум</h3>
+                     <p>Кузов, віск, чорніння гуми, вологе прибирання салону, вікна.</p>
+                 </div>
+                 <div class="service-card">
+                     <i class="fa-solid fa-hand-sparkles service-icon"></i>
+                     <h3>Дітейлінг салону</h3>
+                     <p>Глибока хімчистка сидінь, стелі, підлоги, парова обробка.</p>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <footer id="contacts" class="footer">
+        <div class="container footer__container">
+            <div class="footer__col">
+                <a href="#" class="logo">Moyka<span>City</span></a>
+                <p>Найкращий догляд для вашого авто в місті.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Контакти</h4>
+                <p><i class="fa-solid fa-location-dot"></i> м. Білгород-Дністровський, вул. Катерінська, 2а</p>
+                <p><i class="fa-solid fa-phone"></i> +38 (099) 123-45-67</p>
+                <p>Працюємо: 08:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 MoykaCity. Всі права захищено.
+        </div>
+    </footer>
+
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  // КОНФІГУРАЦІЯ (Сюди вставте те, що скопіювали в Firebase Console)
+  const firebaseConfig = {
+  apiKey: "AIzaSyBZ2wAuVFuP2WfUt-2cPZ7IydXxCX-j1es",
+  authDomain: "moyka-city-640c4.firebaseapp.com",
+  databaseURL: "https://moyka-city-640c4-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "moyka-city-640c4",
+  storageBucket: "moyka-city-640c4.firebasestorage.app",
+  messagingSenderId: "271622311789",
+  appId: "1:271622311789:web:7d0b54a2ea4c4eb08f9464"
+};
+
+  // Ініціалізація
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Експортуємо базу для нашого основного скрипта
+  window.db = db;
+  window.dbFunctions = { doc, getDoc, setDoc, updateDoc, increment };
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+    <script type="module" src="./script.js"></script>
+
+  </body>
+  
+</html>
