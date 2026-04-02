@@ -216,7 +216,7 @@ h1, h2, h3 {
     color: var(--text-gray);
 }
 
-#phoneInput {
+#NumberInput {
     width: 100%;
     padding: 15px 15px 15px 45px;
     font-size: 1.1rem;
@@ -228,7 +228,7 @@ h1, h2, h3 {
     transition: border 0.3s;
 }
 
-#phoneInput:focus {
+#NumberInput:focus {
     outline: none;
     border-color: var(--primary);
 }
